@@ -1,0 +1,7 @@
+When calculating the space complexity, we do not count the input data.
+For example, when we have a method like this:
+public void func(arr[] x){
+    nothing
+}
+
+It's space complexity is O(1), because this arr is already stored somewhere else, and we do not count it.
