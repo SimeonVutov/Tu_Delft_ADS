@@ -1,0 +1,40 @@
+Exercise:
+    Stack implementation using singly-linked list:
+        Add to head(O(1))
+        Remove from head(O(1))
+
+        Add to tail and remove from tail is also possible, but they are not very
+        optimal solutions, because removing from tail takes O(n)
+        because we need to know the element before the tail, so we can set that element's next
+        to null
+
+    Stack implementation using array:
+        ...
+
+    Queue implementation using array:
+        We keep start and end variables:
+        We start with an array of 1 for example
+        ? start = end = 0
+        We want to add three numbers
+        1 2 3 -> end = 0, start = 2
+
+        We want to remove one number, we move end
+        1 2 3 -> end = 1, start = 2
+
+        We want to add one number, we increment the size of the array if needed
+        1 2 3 4 -> end = 1, start = 3
+
+        At one time we will have a problem where we will have a lot of "free" positions at the front
+        So we will need to resize the array, by making a new, but shorter
+        2 3 4 -> end = 0, start = 2
+
+Exercise:
+    Consider a dynamic array which starts with a capacity of 1. The first time the array reaches its capacity,
+    its current capacity is increased with 3 positions (note, not to 3, but with 3).
+    The second time the array is full, its capacity is increased with 5 positions. The third time, the capacity
+    is increased with 7, and so on. Each time the array becomes full, the array capacity is increased with additional
+    positions, namely as many as the next odd number. What is the amortized time complexity of adding an element to this dynamic array?
+    
+    1 3 5 7 9, 11, 13, 15
+    1, 4, 9, 16, 25, 36, 49, 64, ... n^2
+    
